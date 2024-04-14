@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>crud</title>
+
+    <link rel="stylesheet" href="/table.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+	<!-- header -->
+    <header>
+		<h2 style="color: white; font-size: 40px;">Manage Products</h2>
+	</header>
+	<!-- upper button -->
+    <div class="upper-button">
+      <div class="left-box">
+        <button class="add-btn"><i class="fa-solid fa-plus"></i>&nbsp; Add Product</button>
+        <button id="del-all-btn" style="background-color: #8A949B;"> <i class="fa-solid fa-eraser"></i>&nbsp; Delete All</button>
+		<input type="checkbox" name="" id="del-all-box">
+      </div>
+      <div class="right-box">
+		<i class="fa-solid fa-magnifying-glass"></i>
+		<input type="text" id="searchid" placeholder="Type Product ID">
+		<button style="background-color: #162938;">Search</button>
+
+	  </div>
+    </div>
+	<!-- table -->
+	<div class="table-box">
+		<table >
+			<tr>
+				<th>Sr NO</th>
+				<th>profile</th>
+				<th>Product ID</th>
+				<th>Product Title</th>
+				<th>Product Description</th>
+				<th>Product Quantity</th>
+				<th>Location</th>
+				<th>Price</th>
+				<th>Reviews</th>
+				<th>Actions</th>
+			</tr>
+			<tbody  id="table-data">
+
+			</tbody>
+		</table>
+
+
+
+	</div>
+	<!-- modal -->
+	<div class="modal">
+		<i class="fa-solid fa-circle-xmark close-icon"></i>
+		<div class="left-modal">
+			<div class="img-box">
+				<img src="assets/avatar.jpg" id="profile-pic" height="150" width="150" alt="">
+				<i class="fa-solid fa-plus"></i>
+				<input type="file" name="" required id="upload-pic">
+			</div>
+		</div>
+		<div class="right-modal">
+			<form id="register-form">
+				<div class="input-box">
+					<label for="pid"> Product ID</label>
+					<input type="text" required name="" id="id">
+				</div>
+				<div class="input-box">
+					<label for="ptitle"> Product Title</label>
+					<input type="text" required name="" id="title">
+				</div>
+				<div class="input-box">
+					<label for="pdescription"> Product Description</label>
+					<input type="text" name="" id="description" required>
+				</div>
+				<div class="input-box">
+					<label for="pquantity"> Product Quantity</label>
+					<input type="text" name="" id="quantity" required>
+				</div>
+				<div class="input-box">
+					<label for="plocation"> Location</label>
+					<input type="text" name="" id="location" required>
+				</div>
+				<div class="input-box">
+					<label for="pprice"> Product price</label>
+					<input type="text" name="" id="price" required>
+				</div>
+				<div class="input-box">
+					<button id="register-button"> Create</button>
+					<button id= "update-button" style="background-color: #8A949B;"> Update</button>
+				</div>
+			</form>
+			
+		</div>
+	</div>
+	<script src="table.js"></script>
+  </body>
+</html>
